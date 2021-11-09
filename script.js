@@ -3,7 +3,7 @@ import { GIFEncoder, quantize, applyPalette } from "https://unpkg.com/gifenc";
 function makeTextAnImage(value) {
 
   // Canvas dimensions
-  const canvas = document.querySelector('canvas')//document.createElement("canvas");
+  const canvas = document.createElement("canvas");
   canvas.width = 64;
   canvas.height = 64;
 
