@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto Mono, monospace;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom:  20px;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.2;
+  background-size: 50px;
+  background-position: center center;
+}
+
+@media (prefers-reduced-motion) {
+  .bg {
+    background-image: none !important;
+  }
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cool-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 50px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px black;
+  background: #f9f9f9;
+  z-index: 2;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+input[type=text] {
+  text-align: center;
+  font-size: 30px;
+  border: 0;
+  width: 35px;
+  border-bottom: 2px solid #eee;
+  background: #f9f9f9;
+}
+
+input[type=range] {
+  width: 70px;
+}
+
+canvas {
+  display: none;
+}
+
+canvas, img {
+   width: 32px;
+   height: 32px; 
+}
+
+.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
