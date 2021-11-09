@@ -3,7 +3,7 @@ import { GIFEncoder, quantize, applyPalette } from "https://unpkg.com/gifenc";
 function makeTextAnImage(value) {
 
   // Canvas dimensions
-  const canvas = document.createElement("canvas");
+  const canvas = document.querySelector('canvas')//document.createElement("canvas");
   canvas.width = 64;
   canvas.height = 64;
 
@@ -13,14 +13,14 @@ function makeTextAnImage(value) {
   let tryUntil = 60;
   let startSize = 24;
 
-  // Size up until it fits nicely
+  // // Size up until it fits nicely
   let measurements = context.measureText(value);
   for (let i = startSize; i < tryUntil; i++) {
     context.font = `${i}px monospace`;
 
     let measurementTest = context.measureText(value);
     if (measurementTest.width > canvas.width) {
-      context.font = `${-i}px monospace`;
+      context.font = `${i - 1}px monospace`;
       measurements = context.measureText(value);
       break;
     }
@@ -33,7 +33,7 @@ function makeTextAnImage(value) {
   context.fillText(
     value,
     canvas.width / 2,
-    canvas.height / 2 + measurements.fontBoundingBoxDescent
+    canvas.height / 2 + (measurements.fontBoundingBoxDescent || 2)
   );
 
   return canvas;

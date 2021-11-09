@@ -69,10 +69,6 @@ input[type=range] {
   width: 70px;
 }
 
-canvas {
-  display: none;
-}
-
 canvas, img {
    width: 32px;
    height: 32px; 
