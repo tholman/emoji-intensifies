@@ -56,6 +56,12 @@ h1 {
   min-height: 40px;
 }
 
+.fancy-download {
+  text-align: center;
+  font-weight: bold;
+  color: currentColor;
+}
+
 input[type=text] {
   text-align: center;
   font-size: 30px;
