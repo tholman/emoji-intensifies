@@ -1,4 +1,9 @@
-# Emoji Intensifies tool
+# Emoji intensifying tool
+
+![demo GIF](https://mastermind.sirv.com/demo.gif)
+
+<br>
+
 A quick and simple tool to make shaky "intensifies" emoji. You can see it live [here](https://tholman.com/emoji-intensifies).
 
 ## Q/A
