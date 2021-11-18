@@ -91,6 +91,7 @@ function makeShakyBoi(char, intensity) {
 
   document.getElementById("image").src = dataUrl
   document.querySelector('.bg').style.backgroundImage = `url(${dataUrl})`
+  document.querySelector('.fancy-download').href = dataUrl;
 }
 
 
